@@ -7,6 +7,13 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+	container:{
+		center: true,
+		padding:"2rem",
+		screens:{
+			"2xl":"1400px"
+		},
+	},
   	extend: {
   		colors: {
   			background: 'hsl(var(--background))',
@@ -27,6 +34,9 @@ module.exports = {
   				DEFAULT: 'hsl(var(--secondary))',
   				foreground: 'hsl(var(--secondary-foreground))'
   			},
+			  tertiary: {
+				DEFAULT: 'hsl(var(--tertiary))',
+			},
   			muted: {
   				DEFAULT: 'hsl(var(--muted))',
   				foreground: 'hsl(var(--muted-foreground))'
@@ -54,7 +64,10 @@ module.exports = {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+		backgroundImage:{
+			hero: 'url(/hero/hero-bg.png)'
+		},
   	}
   },
   plugins: [require("tailwindcss-animate")],
