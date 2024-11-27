@@ -23,7 +23,7 @@ const Hero = () => {
             <div className="flex max-w-[700px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left">
               <div className="text-sm uppercase font-semibold mb-4 text-primary tracking-[4px]">Web Developer</div>
               <h1 className="h1 mb-4">Hello, my name is Ayush Vikharankar</h1>
-              <p className="subtitle max-w-[490px] mx-auto xl:mx-0">Brief descryption with insights into myself, my vocational journey, adn what i engage in professionally</p>
+              <p className="subtitle max-w-[490px] mx-auto xl:mx-0">Brief descryption with insights into myself, my vocational journey, and what i engage in professionally</p>
 
               {/* Buttons */}
               <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
@@ -32,9 +32,11 @@ const Hero = () => {
                     Contact me <Send size={18}/>
                   </Button>
                 </Link>
-                <Button variant='secondary' className="gap-x-2">
+                <Link href='/hero/Ayush Vikharankar- Resume.pdf' passHref target="_blank">
+                  <Button variant='secondary' className="gap-x-2" as="a" download >
                     Download CV <Download size={18}/>
-                </Button>
+                  </Button>
+                </Link>
               </div>
               {/* SOCIALS */}
               <Socials containerStyles='flex gap-x-6 mx-auto xl:mx-0' iconStyles='text-foreground text-[22px] hover:text-primary transition-all'/>
@@ -69,7 +71,7 @@ const Hero = () => {
 
               <div className="bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2">
               </div>
-              <DevImg containerStyles="bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom" imgSrc='/hero/developer.png' />
+              <DevImg containerStyles="bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom" imgSrc='/hero/developer1.png' />
             </div>
         </div>
         {/* Icon */}
