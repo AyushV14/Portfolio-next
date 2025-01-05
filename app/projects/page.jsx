@@ -5,12 +5,28 @@ import ProjectCard from "@/components/ProjectCard";
 
 const ProjectData = [
   {
-    image : '/work/1.png',
+    image : '/work/ai-pdf1.png',
     category: 'next js',
-    name: 'Prompt finder Website',
-    Description: 'To enchance your ai experience find a prompt to improve response',
-    link:'http://prompt-genius.vercel.app',
-    github:'https://github.com/AyushV14/PromptGenius',
+    name: 'AI to PDF Notes Website',
+    Description: 'Ask questions and chat with your pdf',
+    link:'https://ai-pdf-note-taker-gray.vercel.app/',
+    github:'https://github.com/AyushV14/Ai-Pdf-Note-Taker',
+  },
+  {
+    image : '/work/nike.png',
+    category: 'next js',
+    name: 'Nike Website ',
+    Description: 'Saas Nike Website with payment integration Website',
+    link:'https://shoes-ecom-frontend.vercel.app/',
+    github:'https://github.com/AyushV14/shoes-ecom-frontend',
+  },
+  {
+    image : '/work/zoom.png',
+    category: 'next js',
+    name: 'Yoom Website ',
+    Description: 'Zoom Clone to discuss ,chat via Online Video Calling  ',
+    link:'https://meeting-webapp-ten.vercel.app/',
+    github:'https://github.com/AyushV14/meeting-webapp',
   },
   {
     image : '/work/travel1.png',
@@ -19,6 +35,22 @@ const ProjectData = [
     Description: 'Tours and travel website you can find information for your new adventure',
     link:'https://travel-bliss-ten.vercel.app',
     github:'https://github.com/AyushV14/TravelBliss',
+  },
+  {
+    image : '/work/internship.png',
+    category: 'react js',
+    name: 'Rhlf Website',
+    Description: 'Internship website',
+    link:'',
+    github:'https://github.com/AyushV14/rhlfreact-ayush',
+  },
+  {
+    image : '/work/1.png',
+    category: 'next js',
+    name: 'Prompt finder Website',
+    Description: 'To enchance your ai experience find a prompt to improve response',
+    link:'http://prompt-genius.vercel.app',
+    github:'https://github.com/AyushV14/PromptGenius',
   },
   {
     image : '/work/3.png',
@@ -47,7 +79,7 @@ const ProjectData = [
     github:'https://github.com/AyushV14',
   },
   {
-    image : '/work/product1.png',
+    image : '/work/4.png',
     category: 'react js',
     name: 'Product Website',
     Description: 'dynamic online platform designed to effortlessly showcase and manage a diverse array of products. ',
