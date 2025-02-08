@@ -6,9 +6,12 @@
 [![License](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
 
 🌟 **A modern portfolio showcasing SaaS solutions built with Next.js**  
-Live Demo: [your-portfolio.com](https://www.your-portfolio.com)
+Live Demo: [My-Portfolio]([https://www.your-portfolio.com](https://portfolio-ayush-eight.vercel.app/))
 
-![Portfolio Screenshot](./public/screenshot.jpg) <!-- Add your screenshot -->
+![Portfolio Screenshot](![image](https://github.com/user-attachments/assets/8ecbbb37-1785-4ef2-9935-bd737f4bb1cd)
+![image](https://github.com/user-attachments/assets/53f0dc5f-047c-4e84-b07e-d2d812b285a7)
+
+) <!-- Add your screenshot -->
 
 ## 🚀 Features
 
