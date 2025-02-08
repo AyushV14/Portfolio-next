@@ -40,7 +40,7 @@ Live Demo: [My-Portfolio]([https://www.your-portfolio.com](https://portfolio-ayu
 - Description of key SaaS features
 - Subscription management system
 - Scalable architecture diagram
-- [Live Demo](link)
+- [Live Demo]([link](https://www.your-portfolio.com](https://portfolio-ayush-eight.vercel.app/))
 
 ### Project 2: [Enterprise Solution Name]
 **Tech Stack:** Next.js, NestJS, PostgreSQL, Docker  
