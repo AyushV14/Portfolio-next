@@ -55,8 +55,8 @@ const QualificationData = [
         title:'experience',
         data:[
             {
-                company:'Rimigo (rimigo.com)',
-                role:'Current Role',
+                company:'Rimigo',
+                role:'Software Developer (SDE)',
                 years:'Jan 2026 - Present',
             },
             {
