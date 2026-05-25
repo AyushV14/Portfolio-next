@@ -4,7 +4,7 @@ import { Download, Send } from "lucide-react"
 
 import {
     RiBriefcase4Fill,
-    RiTeamFill,
+    RiTrophyFill,
     RiTodoFill,
     RiArrowDownLine
 } from 'react-icons/ri'
@@ -21,9 +21,9 @@ const Hero = () => {
         <div className="flex justify-between gap-x-8">
             {/* Text */}
             <div className="flex max-w-[700px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left">
-              <div className="text-sm uppercase font-semibold mb-4 text-primary tracking-[4px]">Web Developer</div>
+              <div className="text-sm uppercase font-semibold mb-4 text-primary tracking-[4px]">Full Stack & Mobile Developer</div>
               <h1 className="h1 mb-4">Hello, my name is Ayush Vikharankar</h1>
-              <p className="subtitle max-w-[490px] mx-auto xl:mx-0">Brief descryption with insights into myself, my vocational journey, and what i engage in professionally</p>
+              <p className="subtitle max-w-[490px] mx-auto xl:mx-0">B.Tech IT student with AI Honours at KJSCE. I build AI-powered, scalable web and mobile applications using React Native, Next.js, the MERN stack, and modern DevOps tooling.</p>
 
               {/* Buttons */}
               <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
@@ -45,27 +45,27 @@ const Hero = () => {
             <div className="hidden xl:flex relative">
 
               {/* Badge 1 */}
-              <Badge 
-                icon={<RiBriefcase4Fill/>} 
-                endCountNum={3} 
-                badgeText='Years Of Expiernce' 
+              <Badge
+                icon={<RiBriefcase4Fill/>}
+                endCountNum={3}
+                badgeText='Internships Completed'
                 containerStyles='absolute top-[24%] -left-[5rem]'
               />
               {/* Badge 2 */}
-              <Badge 
-                icon={<RiTodoFill/>} 
-                endCountNum={6} 
-                endCountText='k'
-                badgeText='Finished Project' 
+              <Badge
+                icon={<RiTodoFill/>}
+                endCountNum={12}
+                endCountText='+'
+                badgeText='Projects Built'
                 containerStyles='absolute top-[80%] -left-[1rem]'
               />
 
               {/* Badge 3 */}
-              <Badge 
-                icon={<RiTeamFill/>} 
-                endCountNum={9} 
-                endCountText='k'
-                badgeText='Happy Clients' 
+              <Badge
+                icon={<RiTrophyFill/>}
+                endCountNum={5}
+                endCountText='+'
+                badgeText='Hackathons & Awards'
                 containerStyles='absolute top-[55%] -right-8'
               />
 

@@ -1,4 +1,4 @@
-import {GanttChartSquare, Blocks , Gem} from 'lucide-react'
+import {Smartphone, Blocks , Sparkles} from 'lucide-react'
 import {
     Card,
     CardContent,
@@ -10,19 +10,19 @@ import {
 
 const servicesData = [
     {
-        icon: <GanttChartSquare size={72} strokeWidth={0.8} />,
-        title: 'Web Design',
-        description: 'Crafting visually appealing and user-friendly websites with modern design principles.'
-    },
-    {
         icon: <Blocks size={72} strokeWidth={0.8} />,
-        title: 'App & Web Development',
-        description: 'Building robust web and mobile applications that offer seamless user experiences.'
+        title: 'Full Stack Web Development',
+        description: 'End-to-end web apps with Next.js, React, Node.js, and Prisma - backed by MongoDB, PostgreSQL, or Firebase.'
     },
     {
-        icon: <Gem size={72} strokeWidth={0.8} />,
-        title: 'Branding & Identity',
-        description: 'Creating memorable and distinctive brands through thoughtful logo design, color schemes, and overall identity.'
+        icon: <Smartphone size={72} strokeWidth={0.8} />,
+        title: 'Mobile App Development',
+        description: 'Cross-platform mobile apps with React Native and Expo - real-time chat, push notifications, and in-app purchases.'
+    },
+    {
+        icon: <Sparkles size={72} strokeWidth={0.8} />,
+        title: 'AI Integration & DevOps',
+        description: 'Bringing Gemini, OpenAI, and Hugging Face models into products. Containerized with Docker, shipped on AWS with CI/CD.'
     },
 ]
 

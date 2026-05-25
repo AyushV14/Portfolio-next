@@ -6,7 +6,7 @@ import Image from "next/image";
 const infoData = [
     {
         icon: <User2 size={20} />,
-        text: 'Ayush Vikhrankar',
+        text: 'Ayush Vijay Vikharankar',
     },
     {
         icon: <PhoneIcon size={20} />,
@@ -22,11 +22,11 @@ const infoData = [
     },
     {
         icon: <GraduationCap size={20} />,
-        text: 'B-Tech in Information and Technology',
+        text: 'B.Tech IT (AI Honours) - KJSCE',
     },
     {
         icon: <HomeIcon size={20} />,
-        text: 'Mumbai, India',
+        text: 'Kalyan, Mumbai, India',
     },
 ];
 
@@ -35,9 +35,19 @@ const QualificationData = [
         title:'education',
         data:[
             {
-                university:'KJ Somaiya College of Engineering',
-                qualification:'Bachelor of Technology in Information Technology',
-                years:'2022-2026',
+                university:'KJ Somaiya College of Engineering, Mumbai',
+                qualification:'B.Tech in Information Technology (AI Honours) - CGPA 7.605',
+                years:'2022 - 2026',
+            },
+            {
+                university:'K. M. Agrawal Junior College',
+                qualification:'Higher Secondary (HSC) - 75%',
+                years:'2020 - 2022',
+            },
+            {
+                university:'Smt. Kantaben Chandulal Gandhi English School',
+                qualification:'Secondary (SSC) - 86%',
+                years:'2020',
             },
         ]
     },
@@ -45,14 +55,19 @@ const QualificationData = [
         title:'experience',
         data:[
             {
-                company:'Freelance Web Developer',
-                role:' Making website for clients',
-                years:'June 2024 - Aug 202',
+                company:'DWEBBOX',
+                role:'React Native / Full Stack Developer Intern',
+                years:'Jun 2025 - Aug 2025',
             },
             {
-                company:'Real Happiness Of Life Foundation',
-                role:'Website Team lead ',
-                years:'Sept 2024 - Dec 2024',
+                company:'TechCommit',
+                role:'App Development Intern - TribeX',
+                years:'Feb 2025 - Apr 2025',
+            },
+            {
+                company:'RHFL Foundation',
+                role:'Website Team Lead (led team of 7)',
+                years:'Oct 2024 - Dec 2024',
             },
         ]
     },
@@ -63,19 +78,22 @@ const skillData = [
         title:'Skills',
         data:[
             {
-                name:'HTML CSS Javascript PHP',
+                name:'Frontend - React, Next.js, React Native (Expo), TypeScript, Tailwind CSS, Radix UI',
             },
             {
-                name:'Frontend development Next Js React Js ',
+                name:'Backend - Node.js, Express, Prisma, REST APIs',
             },
             {
-                name:'Backend development Mongo Db Strapi ',
+                name:'Databases - MongoDB, Firebase, PostgreSQL (NeonDB), Convex',
             },
             {
-                name: 'Version Control Git GitHub GitLab',
+                name:'AI / LLMs - Gemini API, OpenAI, Groq, Hugging Face',
             },
             {
-                name: 'Mobile Development React Native Flutter',
+                name:'DevOps & Cloud - AWS (EC2, S3), Docker, GitHub Actions CI/CD, Railway, Render',
+            },
+            {
+                name:'Auth - OAuth 2.0, JWT, Clerk, Firebase Auth',
             },
         ]
     },
@@ -94,10 +112,6 @@ const skillData = [
             {
                 imgPath:'/about/wordpress.svg',
             },
-            {
-                imgPath:'/about/figma.svg',
-            },
-           
         ]
     },
 ]
@@ -130,9 +144,9 @@ const About = () => {
                                 {/* personal */}
                                 <TabsContent value="personal">
                                     <div className="text-center xl:text-left">
-                                        <h3 className="h3 mb-4">Creative Solutions, Exceptional Quality</h3>
+                                        <h3 className="h3 mb-4">Building Scalable, AI-Powered Products</h3>
                                         <p className="subtitle max-m-xl max-auto xl:mx-0">
-                                            I specialize in crafting intuitive websites with cutting-edge technology, delivering dynamic and engaging user experiences.
+                                            B.Tech IT student with AI Honours at K.J. Somaiya College of Engineering. I love shipping full-stack web and mobile apps - from React Native experiences to cloud-deployed AI features.
                                         </p>
                                         {/* Icons */}
                                         <div className="grid xl:grid-cols-2 gap-4 mb-12">
@@ -147,7 +161,7 @@ const About = () => {
                                         <div className="flex flex-col gap-y-2">
                                             <div className="text-primary">Language Skill</div>
                                             <div className="border-b border-border"></div>
-                                            <div>English , Hindi , Marathi , Gujrati </div>
+                                            <div>English, Hindi, Marathi</div>
                                         </div>
                                     </div>
                                 </TabsContent>

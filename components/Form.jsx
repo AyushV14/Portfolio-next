@@ -1,65 +1,76 @@
 'use client';
 
-import { Button } from "./ui/button";
-import { Input } from "./ui/input";
-import { Textarea } from "./ui/textarea";
-import { User, MailIcon, ArrowRightIcon, MessageSquare } from "lucide-react";
-import { useState } from "react";
+import { useState } from 'react';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Button } from '@/components/ui/button';
+import { Send, User, Mail, MessageSquare, ArrowRightCircle } from 'lucide-react';
+
+// Sign up free at https://web3forms.com/ and paste your access key here.
+// Until then the form falls back to opening your mail client via mailto:.
+const WEB3FORMS_ACCESS_KEY = '';
+const FALLBACK_EMAIL = 'vikharankarayush14@gmail.com';
 
 const Form = () => {
-  const [result, setResult] = useState("");
+  const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
+  const [status, setStatus] = useState('idle'); // idle | sending | sent | error
 
-  const onSubmit = async (event) => {
-    event.preventDefault();
-    setResult("Sending...");
-    const formData = new FormData(event.target);
+  const onChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
-    formData.append("access_key", "92f72487-d659-4d4c-bb94-ec0e95381349");
+  const onSubmit = async (e) => {
+    e.preventDefault();
 
+    if (!WEB3FORMS_ACCESS_KEY) {
+      const body = `Name: ${form.name}%0D%0AEmail: ${form.email}%0D%0A%0D%0A${form.message}`;
+      window.location.href = `mailto:${FALLBACK_EMAIL}?subject=${encodeURIComponent(form.subject || 'Portfolio contact')}&body=${body}`;
+      setStatus('sent');
+      return;
+    }
+
+    setStatus('sending');
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData,
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ access_key: WEB3FORMS_ACCESS_KEY, ...form }),
       });
-
-      const data = await response.json();
-
+      const data = await res.json();
       if (data.success) {
-        setResult("Form Submitted Successfully");
-        event.target.reset();
+        setStatus('sent');
+        setForm({ name: '', email: '', subject: '', message: '' });
       } else {
-        console.log("Error", data);
-        setResult(data.message);
+        setStatus('error');
       }
-    } catch (error) {
-      console.error("Submission error:", error);
-      setResult("An error occurred. Please try again.");
+    } catch {
+      setStatus('error');
     }
   };
 
   return (
     <form className="flex flex-col gap-y-4" onSubmit={onSubmit}>
       <div className="relative flex items-center">
-        <Input type="name" id="name" name="name" placeholder="Name" required />
+        <Input type="text" name="name" id="name" placeholder="Full Name" value={form.name} onChange={onChange} required />
         <User className="absolute right-6" size={20} />
       </div>
-
       <div className="relative flex items-center">
-        <Input type="email" id="email" name="email" placeholder="Email" required />
-        <MailIcon className="absolute right-6" size={20} />
+        <Input type="email" name="email" id="email" placeholder="Email Address" value={form.email} onChange={onChange} required />
+        <Mail className="absolute right-6" size={20} />
       </div>
-
       <div className="relative flex items-center">
-        <Textarea name="message" placeholder="Type your message here..." required />
-        <MessageSquare className="absolute top-4 right-6" size={20} />
+        <Input type="text" name="subject" id="subject" placeholder="Subject" value={form.subject} onChange={onChange} />
+        <MessageSquare className="absolute right-6" size={20} />
       </div>
-
-      <Button className="flex items-center max-w-[166px]">
-        Let's Talk
-        <ArrowRightIcon size={20} />
+      <Textarea name="message" id="message" placeholder="Type your message here." value={form.message} onChange={onChange} required />
+      <Button className="flex items-center gap-x-1 max-w-[166px]" type="submit" disabled={status === 'sending'}>
+        {status === 'sending' ? 'Sending...' : 'Lets Talk'}
+        <ArrowRightCircle size={20} />
       </Button>
-
-      <span>{result}</span>
+      {status === 'sent' && (
+        <p className="text-sm text-primary">Thanks! Your message is on its way.</p>
+      )}
+      {status === 'error' && (
+        <p className="text-sm text-red-500">Something went wrong. Please email me directly at {FALLBACK_EMAIL}.</p>
+      )}
     </form>
   );
 };
