@@ -55,6 +55,11 @@ const QualificationData = [
         title:'experience',
         data:[
             {
+                company:'Rimigo (rimigo.com)',
+                role:'Current Role',
+                years:'Jan 2026 - Present',
+            },
+            {
                 company:'DWEBBOX',
                 role:'React Native / Full Stack Developer Intern',
                 years:'Jun 2025 - Aug 2025',
